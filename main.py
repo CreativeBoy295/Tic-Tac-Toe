@@ -159,79 +159,75 @@ def playgame():
 def check_winner():
     global spot1,spot2,spot3,spot4,spot5,spot6,spot7,spot8,spot9,player,turns,win
     if(spot1 == Back.RED + 'X' and spot2 == Back.RED + 'X' and spot3 == Back.RED + 'X'): 
-        print(Back.RED + "X wins 1")
+        print(Back.RED + "X wins ")
         print(Back.RED + "Game over")
         turns = 10
     elif(spot4  == Back.RED + 'X' and spot5 == Back.RED + 'X' and spot6 == Back.RED + 'X' ):
-        print(Back.RED + "X wins 2")
+        print(Back.RED + "X wins ")
         print(Back.RED + "Game over")
         turns = 10
     elif(spot7  == Back.RED + 'X' and spot8 == Back.RED + 'X' and spot9 == Back.RED + 'X'):
-        print(Back.RED + "X wins 3")
+        print(Back.RED + "X wins ")
         print(Back.RED + "Game over")
         turns = 10
     elif(spot1  == Back.RED + 'X' and spot5 == Back.RED + 'X' and spot9 == Back.RED + 'X'):
-        print(Back.RED + "X wins 4")
+        print(Back.RED + "X wins ")
         print(Back.RED + "Game over")
         turns = 10
     elif(spot3  == Back.RED + 'X' and spot5 == Back.RED + 'X' and spot7 == Back.RED + 'X'):
-        print(Back.RED + "X wins5")
+        print(Back.RED + "X wins")
         print(Back.RED + "Game over")
         turns = 10
     elif(spot1  == Back.RED + 'X' and spot4 == Back.RED + 'X' and spot7 == Back.RED + 'X'):
-        print(Back.RED + "X wins6")
+        print(Back.RED + "X wins")
         print(Back.RED + "Game over")
         turns = 10
     elif(spot2  == Back.RED + 'X' and spot5 == Back.RED + 'X' and spot8 == Back.RED + 'X'):
-        print(Back.RED + "X wins7")
+        print(Back.RED + "X wins")
         print(Back.RED + "Game over")
         turns = 10
     elif(spot3  == Back.RED + 'X' and spot6 == Back.RED + 'X' and spot9 == Back.RED + 'X'):
-        print(Back.RED + "X wins8")
+        print(Back.RED + "X wins")
         print(Back.RED + "Game over")
         turns = 10
 
 
     elif(spot1 == Back.BLUE + 'Y' and spot2 == Back.BLUE + 'Y' and spot3 == Back.BLUE + 'Y'): 
-        print(Back.BLUE + "Y wins1")
+        print(Back.BLUE + "Y wins")
         print(Back.BLUE + "Game over")
         turns = 10
     elif(spot4  == Back.BLUE + 'Y' and spot5 == Back.BLUE + 'Y' and spot6 == Back.BLUE + 'Y' ):
-        print(Back.BLUE + "Y wins2")
+        print(Back.BLUE + "Y wins")
         print(Back.BLUE + "Game over")
         turns = 10
     elif(spot7  == Back.BLUE + 'Y' and spot8 == Back.BLUE + 'Y' and spot9 == Back.BLUE + 'Y'):
-        print(Back.BLUE + "Y wins3")
+        print(Back.BLUE + "Y wins")
         print(Back.BLUE + "Game over")
         turns = 10
     elif(spot1  == Back.BLUE + 'Y' and spot5 == Back.BLUE + 'Y' and spot9 == Back.BLUE + 'Y'):
-        print(Back.BLUE + "Y wins4")
+        print(Back.BLUE + "Y wins")
         print(Back.BLUE + "Game over")
         turns = 10
     elif(spot3  == Back.BLUE + 'Y' and spot5 == Back.BLUE + 'Y' and spot7 == Back.BLUE + 'Y'):
-        print(Back.BLUE + "Y wins5")
+        print(Back.BLUE + "Y wins")
         print(Back.BLUE + "Game over")
         turns = 10
     elif(spot1  == Back.BLUE + 'Y' and spot4 == Back.BLUE + 'Y' and spot7 == Back.BLUE + 'Y'):
-        print(Back.BLUE + "Y wins6")
+        print(Back.BLUE + "Y wins")
         print(Back.BLUE + "Game over")
         turns = 10
     elif(spot2  == Back.BLUE + 'Y' and spot5 == Back.BLUE + 'Y' and spot8 == Back.BLUE + 'Y'):
-        print(Back.BLUE + "Y wins7")
+        print(Back.BLUE + "Y wins")
         print(Back.BLUE + "Game over")
         turns = 10
     elif(spot3  == Back.BLUE + 'Y' and spot6 == Back.BLUE + 'Y' and spot9 == Back.BLUE + 'Y'):
-        print(Back.BLUE + "Y wins8")
+        print(Back.BLUE + "Y wins")
         print(Back.BLUE + "Game over")
         turns = 10
-        
-
-        
-
-
+    
+    
 printboard()
 
 while(turns < 10):
     playgame()
     check_winner()
-    print(turns)
