@@ -244,7 +244,7 @@ def playgame(user_in , user_va):
             elif (user_input== '8' and spot8 == 8):
                 print("\n")
                 backup_spot = spot8
-                spot3 = player1_value(user_va)
+                spot8 = player1_value(user_va)
                 if(spot8 is None):
                     spot8 = backup_spot
                 printboard()
@@ -460,6 +460,7 @@ def playgame(user_in , user_va):
             
     else:
         print(Fore.LIGHTYELLOW_EX+"Game Over")
+        
         turns += 1
     updatevariable()
     check_winner()
@@ -602,8 +603,10 @@ def player2_value(user_val,spot_to_check = None):
 def end_game():
     if(player1 is "" or player2 is ""):
         print(Fore.LIGHTYELLOW_EX+"Game Over!")
+        label_over['text']="Game Over!"
         return False
     elif (type(spot1)== str  and type(spot2)== str  and type(spot3)== str  and type(spot4)== str  and type(spot5)== str  and type(spot6)== str  and type(spot7)== str  and type(spot8)== str  and type(spot9) == str):
+        label_over['text']="Game Over!"
         return False
     else:
         return True
@@ -624,8 +627,3 @@ def main():
 
 #mainWindow.after(100, main)
 mainWindow.mainloop()
-
-
-
-
-
