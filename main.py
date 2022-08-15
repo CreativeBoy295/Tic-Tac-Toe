@@ -46,7 +46,7 @@ def submit():
     value_entry.delete(0,END)
     #place_entry.grid(row=7,column = 1 , columnspan = 3)
     
-    #player_label['text'] = "X"
+    label_over['text']=""
     playgame(user_i, user_v)
     mainWindow.update()
 
@@ -322,6 +322,7 @@ def playgame(user_in , user_va):
             
             else:
                 print(Back.RED+"Invalid Input: Please enter a valid number")
+                label_over['text']="Invalid Input"
                 
             
         else:
@@ -455,11 +456,13 @@ def playgame(user_in , user_va):
                 printboard()
 
             else:
-                print(Back.BLUE + "Invalid Input: Please enter a valid number")
+                print(Back.BLUE + "Invalid Input")
                 #playgame()
             
     else:
         print(Fore.LIGHTYELLOW_EX+"Game Over")
+        label_over['text']="Game Over!"
+
         
         turns += 1
     updatevariable()
@@ -560,9 +563,11 @@ def player1_value(user_val,spot_to_check=None):
                 return spot
             else:
                 print("Invalid Number")
+                label_over['text']="Invalid Input"
                 #return 
     else:
         print("Invalid Number")
+        label_over['text']="Invalid Input"
         #return 
 def player2_value(user_val,spot_to_check = None):
     global spot1,spot2,spot3,spot4,spot5,spot6,spot7,spot8,spot9,player,turns,win,user_value,player1,player2
@@ -595,10 +600,14 @@ def player2_value(user_val,spot_to_check = None):
                 
             else:
                 print("Invalid Number")
+                label_over['text']="Invalid Input"
+
                 #playgame()
             
     else:
         print("Invalid Number")
+        label_over['text']="Invalid Input"
+
 
 def end_game():
     if(player1 is "" or player2 is ""):
